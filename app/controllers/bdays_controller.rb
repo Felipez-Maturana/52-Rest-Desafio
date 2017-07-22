@@ -4,7 +4,8 @@ class BdaysController < ApplicationController
   # GET /bdays
   # GET /bdays.json
   def index
-    @bdays = Bday.all
+    # @bdays = Bday.all
+    @bdays = Bday.search(params[:search])
   end
 
   # GET /bdays/1
