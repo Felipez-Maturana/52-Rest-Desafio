@@ -1,0 +1,2 @@
+class Bday < ApplicationRecord
+end

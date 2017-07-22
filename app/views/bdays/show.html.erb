@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bday.name %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @bday.fecha %>
+</p>
+
+<%= link_to 'Edit', edit_bday_path(@bday) %> |
+<%= link_to 'Back', bdays_path %>

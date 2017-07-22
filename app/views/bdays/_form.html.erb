@@ -1,0 +1,27 @@
+<%= form_for(bday) do |f| %>
+  <% if bday.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bday.errors.count, "error") %> prohibited this bday from being saved:</h2>
+
+      <ul>
+      <% bday.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fecha %>
+    <%= f.date_select :fecha, :start_year => 1970, :end_year => Time.current.year %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
